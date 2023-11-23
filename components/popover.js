@@ -1,3 +1,4 @@
+import React, {useEffect} from "react";
 import {
     Popover,
     PopoverHandler,
@@ -6,17 +7,28 @@ import {
     Typography,
   } from "@material-tailwind/react";
 
-  export default function PopoverWithImage({children}) {
+  export default function PopoverWithImage({children, setResetChat}) {
+
+    const [openPopover, setOpenPopover] = React.useState(false);
+
+    const handlePopOver = ()=>{
+      setResetChat(openPopover)
+    };
+
+    useEffect(() => {
+      handlePopOver()
+    }, [openPopover]);
+
     return (
-        <Popover>
-        <PopoverHandler >
-            <div className="flex flex justify-end mt-4">
-              <Button>Chat with us?</Button>
-            </div>
-        </PopoverHandler>
-        <PopoverContent className="z-[999] overflow-hidden p-0">
-            {children}
-        </PopoverContent>
+        <Popover open={openPopover} handler={setOpenPopover}>
+        <div className="flex flex justify-end mt-4">
+          <PopoverHandler>
+                <Button>Chat with us?</Button>
+          </PopoverHandler>
+          <PopoverContent className="z-[999] overflow-hidden p-0">
+              {children}
+          </PopoverContent>
+        </div>
       </Popover>
     );
   }
