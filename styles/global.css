@@ -30,3 +30,63 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+h3{
+  font-size: 4rem;
+}
+
+.astro-bg{
+  background-image: url('/images/astro-background.png');
+  background-color: black;
+  color: white;
+  box-shadow: 0px 2px 2px 0px #2C1CE387;
+  background-repeat: round;
+}
+
+.bg-hero{
+  background-color: #1d0e3e;
+  color: white;
+  padding: 5rem 0 5rem 0;
+}
+
+.bg-astro{
+  /* background: rgb(36,3,92); */
+  /* background: linear-gradient(0deg, rgba(36,3,92,1) 0%, rgba(41,23,184,1) 100%); */
+}
+
+.border-hero{
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+}
+
+.content{
+  background-color: black;
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+textarea{
+  border-radius: .5rem;
+  color: black;
+  max-height: 5rem;
+}
+
+/* width */
+.astro-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.astro-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.astro-scrollbar::-webkit-scrollbar-thumb {
+  background: #2C1CE387;
+}
+
+/* Handle on hover */
+.astro-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2C1CE387;
+}
