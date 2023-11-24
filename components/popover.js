@@ -20,15 +20,15 @@ import {
     }, [openPopover]);
 
     return (
+        <div className="absolute flex flex justify-end mt-4 w-full">
         <Popover open={openPopover} handler={setOpenPopover}>
-        <div className="flex flex justify-end mt-4">
-          <PopoverHandler>
-                <Button>Chat with us?</Button>
-          </PopoverHandler>
-          <PopoverContent className="z-[999] overflow-hidden p-0">
-              {children}
-          </PopoverContent>
-        </div>
+            <PopoverHandler>
+                  <Button>Chat with us?</Button>
+            </PopoverHandler>
+            <PopoverContent className="z-[999] overflow-hidden p-0">
+                {children}
+            </PopoverContent>
       </Popover>
+        </div>
     );
   }

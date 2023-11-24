@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import sendMsg from "../api/openai";
 import { Button} from "@material-tailwind/react";
+
+
 export default function hero({user_input, user_date, reset_chat}) {
 
     const [chatLog, setchatLog] = useState([]);
@@ -83,7 +85,7 @@ export default function hero({user_input, user_date, reset_chat}) {
 
 
     return (
-        <div className="bg-astro sm:w-[40rem] w-[20rem]">
+        <div className="bg-astro sm:w-[35rem] w-[20rem]">
             <div className="grid justify-items-end align-items-end bg-black">
                 <Button
                     onClick={clearChat}

@@ -16,7 +16,7 @@ export default function input({user_date, getUserInput}) {
 
 
   return (
-    <div className="mt-1 bg-astro text-white sm:w-[40rem] w-[20rem]">
+    <div className="mt-1 bg-astro text-white sm:w-[35rem] w-[20rem]">
         <div className="content flex justify-between">
             <textarea
                value={text}

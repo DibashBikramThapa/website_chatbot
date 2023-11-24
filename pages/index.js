@@ -26,6 +26,8 @@ export default function Home() {
       </Head>
 
       <Layout>
+        <div className='relative'>
+          <Hero/>
           <PopoverWithImage setResetChat={setResetChat}>
             <Chat
               user_input= {user_input}
@@ -37,10 +39,8 @@ export default function Home() {
               getUserInput={getUserInput}
             />
             </PopoverWithImage>
-
-          {/* <Datepicker
-            settUserDate={settUserDate}
-          /> */}
+            <img className='w-full lg:h-[43rem] md:h-[30rem]' src={'/images/uae.webp'}/>
+          </div>
       </Layout>
 
     </div>
