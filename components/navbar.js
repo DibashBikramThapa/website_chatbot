@@ -7,27 +7,12 @@ import {
   IconButton,
   List,
   ListItem,
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
 } from "@material-tailwind/react";
 import {
-  ChevronDownIcon,
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import {
-  Bars4Icon,
-  GlobeAmericasIcon,
-  NewspaperIcon,
-  PhoneIcon,
-  RectangleGroupIcon,
-  SquaresPlusIcon,
-  SunIcon,
-  TagIcon,
-  UserGroupIcon,
-} from "@heroicons/react/24/solid";
+import Link from 'next/link';
 import NavListMenu from "./NavbarMenu/view";
 
 
@@ -218,14 +203,12 @@ export default function NavbarWithMegaMenu() {
   return (
     <Navbar className="mx-auto max-w-screen-3xl">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+        <Link
+            href="/"
+            className="text-xl font-bold"
         >
-          Arnifi labs
-        </Typography>
+            Arnifi labs
+        </Link>
         <div className="hidden lg:block">
           <NavList />
         </div>

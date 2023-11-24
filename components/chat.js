@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import sendMsg from "../api/openai";
 import { Button} from "@material-tailwind/react";
+import { FaUserAlt } from "react-icons/fa";
 
-
-export default function hero({user_input, user_date, reset_chat}) {
+export default function hero({user_input, getChatLog}) {
 
     const [chatLog, setchatLog] = useState([]);
 
@@ -14,13 +14,16 @@ export default function hero({user_input, user_date, reset_chat}) {
                 'role':'user'
             }
             setchatLog( oldArray => [...oldArray,user_data]);
-            const data = await sendMsg(user_date='', user_data, chatLog)
+            const data = await sendMsg(user_data, chatLog)
             if(data?.choices.length){
                 const resp_data = {
                     'content': data.choices[0]['message']['content'],
                     'role': 'system',
                 }
                 setchatLog( oldArray => [...oldArray,resp_data]);
+                getChatLog(resp_data)
+            }else if(data?.error){
+                getChatLog({'error': data.error})
             }
         }
     }
@@ -43,15 +46,15 @@ export default function hero({user_input, user_date, reset_chat}) {
     }
     const getChatOutline = (role, forOutline=true,index)=>{
         if(forOutline){
-            var chatOutline = 'flex flex-col justify-center '
+            var chatOutline = 'flex flex-col justify-center mb-5 '
             role == 'user' ?
                     chatOutline += 'items-start':
                     chatOutline += 'items-end'
         }
         else{
-            var chatOutline= 'mt-2 pl-4 pr-4  border-[.1rem] break-words '
+            var chatOutline= 'py-2 px-8 border-[.1rem] break-words '
             role == 'user'?
-            chatOutline +='bg-indigo-300':
+            chatOutline +='bg-indigo-300 mr-5 ':
             chatOutline +='bg-blue-300'
         }
         return chatOutline
@@ -62,8 +65,14 @@ export default function hero({user_input, user_date, reset_chat}) {
             <>
                 {chatLog.length && chatLog.map((each,index)=>
                     <div  key={index} className={getChatOutline(each.role,true,index)}>
-                        <div className={getChatBorder(index) + getChatOutline(each.role,false,index)}>
-                            {each.content}
+                        <div className="flex gap-5 items-center">
+                        {each.role=='user'?
+                            <span className="rounded-full border-2 p-2"> <FaUserAlt className="text-xl"/></span>:
+                            <span className="rounded-full border-2 p-2 order-last mr-5"><img src='' alt='Icon'/></span>
+                             }
+                            <div className={getChatBorder(index) + getChatOutline(each.role,false,index) + ' text-xl'}>
+                                {each.content}
+                            </div>
                         </div>
                     </div>
                 )}
@@ -79,27 +88,20 @@ export default function hero({user_input, user_date, reset_chat}) {
         handleUserInputChange()
       }, [user_input]);
 
-      useEffect(() => {
-        if (reset_chat) clearChat()
-      }, [reset_chat]);
-
-
     return (
-        <div className="bg-astro sm:w-[35rem] w-[20rem]">
-            <div className="grid justify-items-end align-items-end bg-black">
-                <Button
-                    onClick={clearChat}
-                    className="bg-red-600 text-white">Clear Chat?
-                </Button>
+        <div className="grid justify-items-end align-items-end">
+            <Button
+                onClick={clearChat}
+                className="bg-red-600 text-white">Clear Chat?
+            </Button>
 
-                <div className="text-white pl-[2rem] h-[38rem] sm:h-[35rem] md:h-[20rem] italic astro-scrollbar overflow-y-auto w-full">
-                    {chatLog.length ?
-                        <UpdatedUserInput/>
-                        :
-                        <p>Begin Chat?
-                        </p>
-                    }
-                </div>
+            <div className="text-white pl-[2rem] h-[38rem] sm:h-[35rem] md:h-[35rem] italic astro-scrollbar overflow-y-auto w-full">
+                {chatLog.length ?
+                    <UpdatedUserInput/>
+                    :
+                    <p className="text-xl">Begin Chat?
+                    </p>
+                }
             </div>
         </div>
     )
