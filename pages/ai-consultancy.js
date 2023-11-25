@@ -26,11 +26,11 @@ export default function ChatAl() {
     return (
     <div>
         <Head>
-            <title>ChatGPT-AL</title>
+            <title>AI Consultancy</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Layout>
-            <div className="bg-black md:px-[10rem] lg:px-[20rem]">
+            <div className="md:px-[10rem] lg:px-[20rem] bg-blue-100">
                 <Chat user_input={user_input} getChatLog={getChatLog}/>
                 <Input getUserInput={getUserInput} wait_gpt={wait_gpt}/>
             </div>
