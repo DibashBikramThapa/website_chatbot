@@ -23,7 +23,7 @@ export default function ChatAl() {
       </Head>
       <Layout>
         <section class="relative pt-16 bg-blueGray-50">
-          <div className="mb-10 text-3xl font-bold flex items-center justify-center">
+          <div className="mb-10 text-5xl font-bold flex items-center justify-center">
             Who are we?
           </div>
           <div class="container mx-auto">
@@ -299,7 +299,7 @@ export default function ChatAl() {
               <div class="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
                 <div class="col-span-2 row-span-4">
                   <img
-                    src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/kushagra.webp"
+                    src="https://img.freepik.com/free-vector/strategic-consulting-concept-illustration_114360-9336.jpg"
                     class="rounded-full"
                     width="640"
                     height="960"
@@ -309,7 +309,7 @@ export default function ChatAl() {
                 </div>
                 <div class="col-span-2 row-span-2">
                   <img
-                    src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/iman.webp"
+                    src="https://img.freepik.com/free-photo/successful-entrepreneurs-analyzing-perspectives_1163-5270.jpg"
                     class="w-full h-full object-cover object-top rounded-xl"
                     width="640"
                     height="640"
@@ -319,7 +319,7 @@ export default function ChatAl() {
                 </div>
                 <div class="col-span-3 row-span-3">
                   <img
-                    src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/daniel.webp"
+                    src="https://img.freepik.com/free-photo/businessman-monitors-financial-indicators-online_1163-5479.jpg"
                     class="w-full h-full object-cover object-top rounded-xl"
                     width="640"
                     height="427"
