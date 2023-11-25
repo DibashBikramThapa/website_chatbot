@@ -65,7 +65,7 @@ const navListMenuServices = [
 const navListMenuBusiness = [
     {'FREE ZONES':
         [{
-            title: "OverviewE",
+            title: "Overview",
         },
         {
             title: "Business Activities",
