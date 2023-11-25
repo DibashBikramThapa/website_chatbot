@@ -23,7 +23,7 @@ export default function ChatAl() {
       </Head>
       <Layout>
         <section class="relative pt-16 bg-blueGray-50">
-          <div className="mb-10 text-5xl font-bold flex items-center justify-center">
+          <div className="mb-10 text-5 xl font-bold flex items-center justify-center">
             Who are we?
           </div>
           <div class="container mx-auto">
@@ -48,7 +48,7 @@ export default function ChatAl() {
                       ></polygon>
                     </svg> */}
                     <h4 class="text-xl font-bold text-black z-20">
-                      Great for your awesome project
+                      What do we excel at?
                     </h4>
                     <p class="text-md font-light mt-2 text-black z-20">
                       Arnifi is the leading AI-powered business setup advisor
@@ -282,7 +282,7 @@ export default function ChatAl() {
                     class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max"
                   >
                     <span class="block text-white font-semibold">
-                      Get Started
+                      <Link href="/ai-consultancy">Get Started</Link>
                     </span>
                   </button>
                   <button
