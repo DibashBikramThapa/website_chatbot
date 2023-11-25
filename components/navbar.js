@@ -186,6 +186,17 @@ function NavList() {
           Contact Us
         </ListItem>
       </Typography>
+      <Typography
+        as="a"
+        href="/about"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          About Us
+        </ListItem>
+      </Typography>
     </List>
   );
 }
