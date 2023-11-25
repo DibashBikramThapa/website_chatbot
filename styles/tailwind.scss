@@ -1821,6 +1821,11 @@ video {
   border-color: rgb(255 235 59 / var(--tw-border-opacity));
 }
 
+.border-blue-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(25 118 210 / var(--tw-border-opacity));
+}
+
 .\!border-t-transparent {
   border-top-color: transparent !important;
 }
@@ -2158,6 +2163,16 @@ video {
 
 .bg-yellow-500\/20 {
   background-color: rgb(255 235 59 / 0.2);
+}
+
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 118 210 / var(--tw-bg-opacity));
+}
+
+.bg-blue-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 222 251 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-60 {
@@ -3027,6 +3042,16 @@ video {
 .text-yellow-900 {
   --tw-text-opacity: 1;
   color: rgb(245 127 23 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(117 117 117 / var(--tw-text-opacity));
+}
+
+.text-blue-200 {
+  --tw-text-opacity: 1;
+  color: rgb(144 202 249 / var(--tw-text-opacity));
 }
 
 .antialiased {
@@ -4469,6 +4494,11 @@ video {
   padding: 1.75rem;
 }
 
+.hover\:text-2xl:hover {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .hover\:text-blue-gray-500:hover {
   --tw-text-opacity: 1;
   color: rgb(96 125 139 / var(--tw-text-opacity));
@@ -4487,6 +4517,21 @@ video {
 .hover\:text-red-600:hover {
   --tw-text-opacity: 1;
   color: rgb(229 57 53 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(117 117 117 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(25 118 210 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-200:hover {
+  --tw-text-opacity: 1;
+  color: rgb(144 202 249 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-75:hover {
@@ -4883,6 +4928,11 @@ video {
 .focus\:ring-yellow-200:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 245 157 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-blue-700:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(25 118 210 / var(--tw-ring-opacity));
 }
 
 .active\:scale-100:active {
@@ -5915,11 +5965,6 @@ video {
 @media (min-width: 540px) {
   .sm\:h-\[35rem\] {
     height: 35rem;
-  }
-
-  .sm\:px-\[10rem\] {
-    padding-left: 10rem;
-    padding-right: 10rem;
   }
 }
 

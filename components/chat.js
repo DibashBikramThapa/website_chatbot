@@ -54,8 +54,8 @@ export default function hero({user_input, getChatLog}) {
         else{
             var chatOutline= 'py-2 px-8 border-[.1rem] break-words '
             role == 'user'?
-            chatOutline +='bg-indigo-300 mr-5 ':
-            chatOutline +='bg-blue-300'
+            chatOutline +='bg-white mr-5 ':
+            chatOutline +='bg-blue-700'
         }
         return chatOutline
     }
@@ -67,10 +67,10 @@ export default function hero({user_input, getChatLog}) {
                     <div  key={index} className={getChatOutline(each.role,true,index)}>
                         <div className="flex gap-5 items-center">
                         {each.role=='user'?
-                            <span className="rounded-full border-2 p-2"> <FaUserAlt className="text-xl"/></span>:
-                            <span className="rounded-full border-2 p-2 order-last mr-5"><img src='' alt='Icon'/></span>
+                            <span className="rounded-full border-2 p-2 text-blue-700"> <FaUserAlt className="text-xl "/></span>:
+                            <span className="rounded-full border-2 p-2 order-last mr-5 text-blue-700"><img src='' alt='Icon'/></span>
                              }
-                            <div className={getChatBorder(index) + getChatOutline(each.role,false,index) + ' text-xl'}>
+                            <div className={getChatBorder(index) + getChatOutline(each.role,false,index) + ' text-xl text-black'}>
                                 {each.content}
                             </div>
                         </div>
@@ -90,12 +90,12 @@ export default function hero({user_input, getChatLog}) {
 
     return (
         <div className="grid justify-items-end align-items-end">
-            <Button
+            {/* <Button
                 onClick={clearChat}
                 className="bg-red-600 text-white">Clear Chat?
-            </Button>
+            </Button> */}
 
-            <div className="text-white pl-[2rem] h-[38rem] sm:h-[35rem] md:h-[35rem] italic astro-scrollbar overflow-y-auto w-full">
+            <div className="text-blue-700 mt-5 pt-5 pl-[2rem] h-[38rem] sm:h-[35rem] md:h-[35rem] italic astro-scrollbar overflow-y-auto w-full">
                 {chatLog.length ?
                     <UpdatedUserInput/>
                     :

@@ -23,12 +23,12 @@ export default function input({getUserInput, wait_gpt}) {
 
 
   return (
-    <div className="content flex justify-between gap-4">
+    <div className="flex justify-between gap-4">
         <textarea
             value={text}
             onChange={handleTextChange}
             placeholder="Ask ChatGpt-AL your question..."
-            className="p-4 w-full focus:ring-blue-600 astro-scrollbar"
+            className="p-4 w-full focus:ring-blue-700 astro-scrollbar"
             type='text'
             disabled={response_wait_gpt}
 
@@ -36,7 +36,7 @@ export default function input({getUserInput, wait_gpt}) {
           <button
             disabled={response_wait_gpt}
             onClick={returntUserInput}
-            className={(response_wait_gpt)? 'bg-gray-600 p-3' : 'bg-red-600 p-3 hover:bg-gray-600'}
+            className={(response_wait_gpt)? 'text-blue-200 p-3' : 'text-blue-700 p-3 hover:text-blue-200'}
             data-te-toggle="tooltip"
             title="Click to chat!"
           >
