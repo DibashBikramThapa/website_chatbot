@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import Head from 'next/head';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
+import Services from "../components/services";
+import Services2 from "../components/services2";
+import ContactUs from "../components/contactUs";
+import Footer from "../components/footer";
 
 
 export default function Home() {
@@ -15,6 +19,11 @@ export default function Home() {
       </Head>
       <Layout>
         <Hero/>
+        <Services />
+        {/* <Services2 /> */}
+        <ContactUs />
+        <Footer />
+
       </Layout>
     </div>
   );

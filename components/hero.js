@@ -16,7 +16,7 @@ export default function hero() {
             </p>
           </div>
         </div>
-        <div className="md:absolute flex flex justify-end w-full md:h-[30rem] items-center place-content-center">
+        <div className="md:absolute flex justify-end w-full md:h-[30rem] items-center place-content-center">
           <Link href="/chat-al">
             <Button className="md:transform md:rotate-[-90deg] p-5 hover:p-7 text-xl md:translate-x-10">Try ChatGPT-AL
             </Button>
