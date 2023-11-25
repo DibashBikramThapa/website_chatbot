@@ -19,7 +19,7 @@ export default function navbar_dropdown1(navListMenuItems) {
             <div key={key} className="flex gap-3 rounded-lg flex-col">
                 {Object.keys(each)[0] !='Hide Key' &&
                     (
-                    <a href="#" >
+                    // <a href="#" >
                         <MenuItem className="">
                             <Typography
                             variant="h6"
@@ -29,12 +29,12 @@ export default function navbar_dropdown1(navListMenuItems) {
                             {Object.keys(each)}
                             </Typography>
                         </MenuItem>
-                    </a>
+                    // </a>
                 )}
                 {Object.values(each).map(
                         (each) =>(
                             each.map((e,index)=> (
-                                <a href="#" key={key+index}>
+                                // <a href="#" key={key+index}>
                                     <MenuItem className="">
                                     <Typography
                                         variant="h6"
@@ -44,7 +44,7 @@ export default function navbar_dropdown1(navListMenuItems) {
                                             {e.title}
                                     </Typography>
                                     </MenuItem>
-                                </a>
+                                // </a>
                             ))))
                 }
             </div>
