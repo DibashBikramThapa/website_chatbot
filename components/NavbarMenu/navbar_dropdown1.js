@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 import {
   Navbar,
   Collapse,
@@ -12,6 +13,7 @@ import {
   MenuList,
   MenuItem,
 } from "@material-tailwind/react";
+
 
 export default function navbar_dropdown1(navListMenuItems) {
     const renderItems = navListMenuItems.map(
@@ -34,7 +36,7 @@ export default function navbar_dropdown1(navListMenuItems) {
                 {Object.values(each).map(
                         (each) =>(
                             each.map((e,index)=> (
-                                // <a href="#" key={key+index}>
+                                <Link href={e.link} key={key+index}>
                                     <MenuItem className="">
                                     <Typography
                                         variant="h6"
@@ -44,7 +46,7 @@ export default function navbar_dropdown1(navListMenuItems) {
                                             {e.title}
                                     </Typography>
                                     </MenuItem>
-                                // </a>
+                                </Link>
                             ))))
                 }
             </div>

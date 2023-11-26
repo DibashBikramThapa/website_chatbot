@@ -7,6 +7,7 @@ module.exports = withMT({
   content: [
     "./components/**/*.{html,js}",
     "./components/*.{html,js}",
+    "./pages/**/*.{html,js}",
     "./pages/*.js",
   ],
   theme: {

@@ -13,54 +13,48 @@ import Link from "next/link";
 import NavListMenu from "./NavbarMenu/view";
 
 const navListMenuServices = [
-  {
-    "Essentail Services": [
-      {
-        title: "Bank Account Opening in UAE",
-      },
-      {
-        title: "Accounting Services",
-      },
-      {
-        title: "Compliance Services",
-      },
-      {
-        title: "Health Insurance",
-      },
-    ],
-  },
-  {
-    "Operational Services": [
-      {
-        title: "IT Services",
-      },
-      {
-        title: "Legal Services",
-      },
-      {
-        title: "Mail Management",
-      },
-      {
-        title: "Virtual Receptionist",
-      },
-    ],
-  },
-  {
-    "Support Services": [
-      {
-        title: "Tourist Visa",
-      },
-      {
-        title: "Golden Visa UAE",
-      },
-      {
-        title: "PRO Services",
-      },
-      {
-        title: "Will Preparation Service",
-      },
-    ],
-  },
+    {'Essentail Services':
+        [{
+            title: "Business Setup Consultancy and Advice",
+            link: '/services/Business-setup-consultancy-advice',
+        },
+        {
+            title: "Trade License Processing:",
+            link: '/services/Trade-license-processing',
+        },
+        {
+            title: "Legal Services",
+            link: '/services/Legal-services',
+        },
+        ]
+    },
+    {'Operational Services':
+        [{
+            title: "Corporate Secretarial Services",
+            link: '/services/Corporate-secretarial-services',
+        },
+        {
+            title: "Accounting and Tax Services",
+            link: '/services/Accounting-and-tax-services',
+        },
+        {
+            title: "ChatGPT-Powered Chatbot",
+            link: '/ai-consultancy',
+        },
+        ]
+    },
+    {'Support Services':
+        [{
+            title: "Visa and Permit Processing",
+            link: '/services/Visa-and-permit-processing',
+        },
+        {
+            title: "Business Support Servicess",
+            link: '/services/Business-support-services',
+        },
+        ]
+    },
+
 ];
 
 const navListMenuBusiness = [
@@ -127,70 +121,73 @@ const navListMenuTax = [
 ];
 
 const navListMenuResources = [
-  {
-    "Hide Key": [
-      {
-        title: "About",
-      },
-      {
-        title: "Blog",
-      },
-      {
-        title: "Setup Guides",
-      },
-      {
-        title: "Press",
-      },
-      {
-        title: "Infographics",
-      },
-      {
-        title: "Get a Trade License",
-      },
-      {
-        title: "Infographics",
-      },
-      {
-        title: "E-commerce licence",
-      },
-      {
-        title: "How to start a business in Dubai",
-      },
-      {
-        title: "Our Partners",
-      },
-      {
-        title: "Stand Together UAE",
-      },
-      {
-        title: "Citizenship & Residency",
-      },
-      {
-        title: "FAQs",
-      },
-      {
-        title: "Support Services",
-      },
-    ],
-  },
-];
+    {'Hide Key':[
+        {
+            title: "About",
+            link: '/'
+        },
+        {
+            title: "Blog",
+            link: '/'
+        },
+        {
+            title: "Setup Guides",
+            link: '/'
+        },
+        {
+            title: "Press",
+            link: '/'
+        },
+        {
+            title: "Infographics",
+            link: '/'
+        },
+        {
+            title: "Get a Trade License",
+            link: '/'
+        },
+        {
+            title: "Infographics",
+            link: '/'
+        },
+        {
+            title: "E-commerce licence",
+            link: '/'
+        },
+        {
+            title: "How to start a business in Dubai",
+            link: '/'
+        },
+        {
+            title: "Our Partners",
+            link: '/'
+        },
+        {
+            title: "Stand Together UAE",
+            link: '/'
+        },
+        {
+            title: "Citizenship & Residency",
+            link: '/'
+        },
+        {
+            title: "FAQs",
+            link: '/'
+        },
+        {
+            title: "Support Services",
+            link: '/'
+        },
+    ]},
+]
 
 function NavList() {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-      <NavListMenu
-        services="Business Setup"
-        navListMenuItems={navListMenuBusiness}
-      />
-      <NavListMenu
-        services="Accouting & Tax"
-        navListMenuItems={navListMenuTax}
-      />
-      <NavListMenu services="Services" navListMenuItems={navListMenuServices} />
-      <NavListMenu
-        services="Resources"
-        navListMenuItems={navListMenuResources}
-      />
+      {/* <NavListMenu services='Business Setup' navListMenuItems={navListMenuBusiness}/> */}
+      {/* <NavListMenu services='Accouting & Tax' navListMenuItems={navListMenuTax}/> */}
+      <NavListMenu services='Resources' navListMenuItems={navListMenuResources}/>
+      <NavListMenu services='Services' navListMenuItems={navListMenuServices}/>
       <Typography
         as="a"
         href="#"
