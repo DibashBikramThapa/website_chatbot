@@ -225,7 +225,7 @@ export default function NavbarWithMegaMenu() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-3xl">
+    <Navbar className="mx-auto max-w-screen-3xl fixed bg-white z-50 bg-opacity-100">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link
             href="/"

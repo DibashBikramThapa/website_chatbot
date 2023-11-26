@@ -6,7 +6,6 @@ import Hero from '../components/hero';
 import Services from "../components/services";
 import Services2 from "../components/services2";
 import ContactUs from "../components/contactUs";
-import Footer from "../components/footer";
 
 
 export default function Home() {
@@ -22,8 +21,6 @@ export default function Home() {
         <Services />
         {/* <Services2 /> */}
         <ContactUs />
-        <Footer />
-
       </Layout>
     </div>
   );

@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 
 import Head from 'next/head';
 import Layout from '../../../components/layout'
-import Footer from '../../../components/footer'
 import BusinessSetup from '../../../components/ServiceDetails/BusinessSetup';
 import LegalService from '../../../components/ServiceDetails/LegalService';
 
@@ -119,7 +118,6 @@ export default function Services() {
         { slug== 'Business-setup-consultancy-advice' ? <BusinessSetup/> : ''}
         { slug== 'Legal-services' ? <LegalService/> : ''}
       </div>
-      <Footer />
     </Layout>
 
   </>
