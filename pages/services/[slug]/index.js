@@ -117,6 +117,12 @@ export default function Services() {
       <div className='p-5 md:px-[10rem] bg-gray-200'>
         { slug== 'Business-setup-consultancy-advice' ? <BusinessSetup/> : ''}
         { slug== 'Legal-services' ? <LegalService/> : ''}
+        {/* Added for filling space */}
+        { slug== 'Trade-license-processing' ? <LegalService/> : ''}
+        { slug== 'Corporate-secretarial-services' ? <LegalService/> : ''}
+        { slug== 'Accounting-and-tax-services' ? <LegalService/> : ''}
+        { slug== 'Visa-and-permit-processing' ? <LegalService/> : ''}
+        { slug== 'Business-support-services' ? <LegalService/> : ''}
       </div>
     </Layout>
 
