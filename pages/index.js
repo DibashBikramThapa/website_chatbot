@@ -7,7 +7,6 @@ import Services from "../components/services";
 import Services2 from "../components/services2";
 import Insights from "../components/insights";
 import ContactUs from "../components/contactUs";
-import Footer from "../components/footer";
 
 
 export default function Home() {
@@ -24,8 +23,6 @@ export default function Home() {
         {/* <Services2 /> */}
         <Insights />
         <ContactUs />
-        <Footer />
-
       </Layout>
     </div>
   );

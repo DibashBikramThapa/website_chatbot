@@ -5,9 +5,6 @@ import { Button } from "@material-tailwind/react";
 
 import Head from "next/head";
 import Layout from "../components/layout";
-import Chat from "../components/chat";
-import Input from "../components/input";
-import Footer from "../components/footer";
 import Link from "next/link";
 import {
   Bars3Icon,
@@ -305,7 +302,6 @@ export default function ChatAl() {
             </div>
           </div>
         </div>
-        <Footer />
       </Layout>
     </div>
   );

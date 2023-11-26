@@ -199,7 +199,13 @@ function NavList() {
           Contact Us
         </ListItem>
       </Typography>
-      <Typography
+
+      <Link href="/about" className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          About Us
+        </ListItem>
+        </Link>
+      {/* <Typography
         as="a"
         variant="small"
         color="blue-gray"
@@ -208,7 +214,7 @@ function NavList() {
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           <Link href="/about">About Us</Link>
         </ListItem>
-      </Typography>
+      </Typography> */}
     </List>
   );
 }
@@ -224,7 +230,7 @@ export default function NavbarWithMegaMenu() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-3xl">
+    <Navbar className="mx-auto max-w-screen-3xl fixed bg-white z-50 bg-opacity-100">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link href="/" className="text-xl font-bold">
           Arnifi labs
