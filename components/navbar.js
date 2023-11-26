@@ -199,7 +199,13 @@ function NavList() {
           Contact Us
         </ListItem>
       </Typography>
-      <Typography
+
+      <Link href="/about" className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          About Us
+        </ListItem>
+        </Link>
+      {/* <Typography
         as="a"
         href="/about"
         variant="small"
@@ -209,7 +215,7 @@ function NavList() {
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           About Us
         </ListItem>
-      </Typography>
+      </Typography> */}
     </List>
   );
 }
