@@ -4919,6 +4919,16 @@ video {
   color: rgb(33 150 243 / var(--tw-text-opacity));
 }
 
+.hover\:text-blue-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(25 118 210 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(13 71 161 / var(--tw-text-opacity));
+}
+
 .hover\:text-blue-gray-500:hover {
   --tw-text-opacity: 1;
   color: rgb(96 125 139 / var(--tw-text-opacity));
@@ -4942,26 +4952,6 @@ video {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.hover\:text-orange-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(251 140 0 / var(--tw-text-opacity));
-}
-
-.hover\:text-red-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(183 28 28 / var(--tw-text-opacity));
-}
-
-.hover\:text-blue-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(13 71 161 / var(--tw-text-opacity));
-}
-
-.hover\:text-blue-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(25 118 210 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -6878,14 +6868,6 @@ video {
 
   .lg\:pb-10 {
     padding-bottom: 2.5rem;
-  }
-
-  .lg\:pt-\[120px\] {
-    padding-top: 120px;
-  }
-
-  .lg\:pt-20 {
-    padding-top: 5rem;
   }
 
   .lg\:pt-10 {
