@@ -89,13 +89,13 @@ export default function hero({user_input, getChatLog}) {
       }, [user_input]);
 
     return (
-        <div className="grid justify-items-end align-items-end">
+        <div className="pt-20 grid justify-items-end align-items-end">
             {/* <Button
                 onClick={clearChat}
                 className="bg-red-600 text-white">Clear Chat?
             </Button> */}
 
-            <div className="text-blue-700 mt-5 pt-5 pl-[2rem] h-[38rem] sm:h-[35rem] md:h-[35rem] italic astro-scrollbar overflow-y-auto w-full">
+            <div className="text-blue-700 mt-5 pt-5 pl-[2rem] h-[25rem] sm:h-[25rem] md:h-[25rem] italic astro-scrollbar overflow-y-auto w-full">
                 {chatLog.length ?
                     <UpdatedUserInput/>
                     :
