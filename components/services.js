@@ -25,8 +25,8 @@ const servicesData = [
         <polyline points="10 9 9 9 8 9"></polyline>
       </>
     ),
-    title: "Trade License Processing",
-    description: "Know the how-to of the trading grounds",
+    title: "Trade License Processing Service for All",
+    description: "Know the how-to of the trading grounds and everything",
     color: "orange",
     link: '/services/Trade-license-processing',
   },
@@ -41,7 +41,7 @@ const servicesData = [
       </>
     ),
     title: "Visa and Permit Processing",
-    description: "What is the legal entry process? Know it better",
+    description: "What is the legal entry process? Know it better with our experts",
     color: "yellow",
     link: '/services/Visa-and-permit-processing',
 
@@ -88,7 +88,7 @@ const servicesData = [
       </>
     ),
     title: "Legal Services",
-    description: "We help you stay protected.",
+    description: "We help you stay protected from everything that comes your way",
     color: "indigo",
     link: '/services/Legal-services',
   },
