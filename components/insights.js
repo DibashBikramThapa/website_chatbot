@@ -1,6 +1,6 @@
 export default function Insights() {
   return (
-    <>
+    <div className="pl-3">
       <div className="flex justify-center pt-20 text-4xl font-bold bg-[#F3F4F6]">
         Dubai Business Setup Insights
       </div>
@@ -24,7 +24,7 @@ export default function Insights() {
                 <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                   <h3>
                     <a
-                      href="javascript:void(0)"
+                      href="#"
                       className="
                         font-semibold
                         text-dark text-xl
@@ -46,7 +46,7 @@ export default function Insights() {
                     elit. Lorem consectetur adipiscing elit.
                   </p>
                   <a
-                    href="javascript:void(0)"
+                    href="#"
                     className="
                      inline-block
                      py-2
@@ -74,7 +74,7 @@ export default function Insights() {
                 <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                   <h3>
                     <a
-                      href="javascript:void(0)"
+                      href="#"
                       className="
                         font-semibold
                         text-dark text-xl
@@ -96,7 +96,7 @@ export default function Insights() {
                     elit. Lorem consectetur adipiscing elit.
                   </p>
                   <a
-                    href="javascript:void(0)"
+                    href="#"
                     className="
                      inline-block
                      py-2
@@ -124,7 +124,7 @@ export default function Insights() {
                 <div className="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                   <h3>
                     <a
-                      href="javascript:void(0)"
+                      href="#"
                       className="
                         font-semibold
                         text-dark text-xl
@@ -146,7 +146,7 @@ export default function Insights() {
                     elit. Lorem consectetur adipiscing elit.
                   </p>
                   <a
-                    href="javascript:void(0)"
+                    href="#"
                     className="
                      inline-block
                      py-2
@@ -167,6 +167,6 @@ export default function Insights() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

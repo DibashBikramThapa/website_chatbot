@@ -92,3 +92,7 @@ textarea{
   background: rgb(25 118 210/var(--tw-text-opacity));
 }
 
+.shadow-hero{
+  box-shadow: 0 2px 15px 1px #2563ce;
+}
+

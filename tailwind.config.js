@@ -11,7 +11,11 @@ module.exports = withMT({
     "./pages/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
+       }
+    },
   },
   plugins: [],
 });

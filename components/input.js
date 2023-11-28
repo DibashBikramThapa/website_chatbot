@@ -23,7 +23,7 @@ export default function input({getUserInput, wait_gpt}) {
 
 
   return (
-    <div className="flex justify-between gap-4 items-end mt-[10rem] pb-2">
+    <div className="flex justify-between gap-4 items-end mt-[5rem] pb-2">
         <textarea
             value={text}
             onChange={handleTextChange}

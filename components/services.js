@@ -142,9 +142,9 @@ export default function Services() {
           <Link
             href={service.link}
             className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium"
+            key={index}
           >
             <div
-              key={index}
               className={`p-10 flex flex-col items-center text-center group md:lg:xl:border-r md:lg:xl:border-b hover:bg-slate-50 cursor-pointer`}
             >
               <span
