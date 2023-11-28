@@ -32,7 +32,7 @@ export default function ChatAl() {
         </Head>
         <Navbar for_chat={true}/>
         <div className="md:px-[10rem] lg:px-[15rem] bg-blue-100 p-4">
-            <Chat user_input={user_input} getChatLog={getChatLog}/>
+            <Chat user_input={user_input} getChatLog={getChatLog} getUserInput={getUserInput}/>
             <Input getUserInput={getUserInput} wait_gpt={wait_gpt}/>
         </div>
     </>

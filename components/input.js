@@ -12,9 +12,11 @@ export default function input({getUserInput, wait_gpt}) {
   }
 
   const returntUserInput = ()=>{
-    getUserInput(text)
-    setText('')
-    setResponseWaitGPT(true)
+    if(text){
+      getUserInput(text)
+      setText('')
+      setResponseWaitGPT(true)
+    }
   }
 
   useEffect(() => {
