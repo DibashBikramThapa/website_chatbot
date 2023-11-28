@@ -30,8 +30,8 @@ export default function ChatAl() {
             <title>AI Consultancy</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Navbar/>
-        <div className="md:px-[10rem] lg:px-[15rem] bg-blue-100">
+        <Navbar for_chat={true}/>
+        <div className="md:px-[10rem] lg:px-[15rem] bg-blue-100 p-4">
             <Chat user_input={user_input} getChatLog={getChatLog}/>
             <Input getUserInput={getUserInput} wait_gpt={wait_gpt}/>
         </div>

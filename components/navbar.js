@@ -188,17 +188,12 @@ function NavList() {
       {/* <NavListMenu services='Accouting & Tax' navListMenuItems={navListMenuTax}/> */}
       <NavListMenu services='Resources' navListMenuItems={navListMenuResources}/>
       <NavListMenu services='Services' navListMenuItems={navListMenuServices}/>
-      <Typography
-        as="a"
-        href="#"
-        variant="small"
-        color="blue-gray"
-        className="font-medium"
-      >
+
+      <Link href="/contact-us" className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           Contact Us
         </ListItem>
-      </Typography>
+      </Link>
 
       <Link href="/about" className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
         <ListItem className="flex items-center gap-2 py-2 pr-4">
@@ -219,7 +214,7 @@ function NavList() {
   );
 }
 
-export default function NavbarWithMegaMenu() {
+export default function NavbarWithMegaMenu({for_chat=false}) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -230,7 +225,7 @@ export default function NavbarWithMegaMenu() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-3xl fixed bg-white z-50 bg-opacity-100">
+    <Navbar className={for_chat? 'mx-auto max-w-screen-3xl fixed bg-white z-50 bg-opacity-100 shadow-hero': 'mx-auto mt-[3rem] max-w-screen-3xl fixed bg-white z-50 bg-opacity-100 shadow-hero'}>
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link href="/" className="text-xl font-bold">
           Arnifi labs
@@ -242,7 +237,7 @@ export default function NavbarWithMegaMenu() {
           <Button
             variant="text"
             size="lg"
-            className="bg-red-600 text-white hover:bg-white hover:border-red-600 border-2 hover:text-red-600"
+            className="bg-blue-700 text-white hover:bg-white hover:border-blue-700 border-2 hover:text-blue-700"
           >
             Cost Calculator
           </Button>

@@ -1,6 +1,6 @@
 export default function Insights() {
   return (
-    <>
+    <div className="pl-3">
       <div className="flex justify-center pt-20 text-4xl font-bold bg-[#F3F4F6]">
         Dubai Business Setup Insights
       </div>
@@ -167,6 +167,6 @@ export default function Insights() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
