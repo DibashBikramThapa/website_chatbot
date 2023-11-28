@@ -5,11 +5,17 @@ import sendMsg from "../api/openai";
 
 import { FaUserAlt } from "react-icons/fa";
 import { RiOpenaiFill } from "react-icons/ri";
+import { Button } from "@material-tailwind/react";
 
 
-export default function hero({user_input, getChatLog}) {
+export default function hero({user_input, getChatLog, getUserInput}) {
 
     const [chatLog, setchatLog] = useState([]);
+    const [eg_query] = useState([
+        {'title': 'How do I get a bank account?'},
+        {'title': 'Will corporate tax affect me?'},
+        {'title': 'How do I start the visa process?'},
+    ])
 
     const handleUserInputChange = async()=>{
         if(user_input){
@@ -98,9 +104,9 @@ export default function hero({user_input, getChatLog}) {
                     {/* <img src={'/images/gpt.png'} alt='Icon'/> */}
                         <RiOpenaiFill className="text-3xl"/>
                     </span>
-                    <svg class="ms-4 animate-[bounce_0.1s_infinite] w-2 h-1 p-1 bg-white"/>
-                    <svg class="animate-[bounce_0.4s_infinite] w-2 h-1 p-1 bg-white"/>
-                    <svg class="animate-[bounce_0.6s_infinite] w-2 h-1 p-1 bg-white"/>
+                    <svg className="ms-4 animate-[bounce_0.1s_infinite] w-2 h-1 p-1 bg-white"/>
+                    <svg className="animate-[bounce_0.5s_infinite] w-2 h-1 p-1 bg-white"/>
+                    <svg className="animate-[bounce_0.8s_infinite] w-2 h-1 p-1 bg-white"/>
                 </div>
                  : ''}
             </>
@@ -111,23 +117,40 @@ export default function hero({user_input, getChatLog}) {
         setchatLog([])
     }
 
+    const handleEgQueryClick = (e) => {
+        getUserInput(e.target.innerText)
+    }
+
     useEffect(() => {
         handleUserInputChange()
       }, [user_input]);
 
     return (
         <div className="pt-20 grid justify-items-end align-items-end h-[100%]">
-            {/* <Button
-                onClick={clearChat}
-                className="bg-red-600 text-white">Clear Chat?
-            </Button> */}
-
             <div className="text-blue-700 mt-5 pt-5 h-[25rem] sm:h-[30rem] md:h-[34rem] italic astro-scrollbar overflow-y-auto w-full">
                 {chatLog.length ?
                     <UpdatedUserInput/>
                     :
-                    <p className="text-xl text-white font-bold">Begin Chat?
-                    </p>
+                    <>
+                        <p className="self-center text-xl text-blue-700 font-bold mb-3">Some example questions you can ask AI Consultancy</p>
+                        <div className="flex justify-center gap-2 flex-col md:flex-row">
+                            {eg_query.map((each,index)=>{
+                                return(
+                                    <Button
+                                    variant="text"
+                                    size="lg"
+                                    className="bg-blue-700 text-white hover:bg-white hover:border-blue-700 border-2 hover:text-blue-700"
+                                    key={index}
+                                    onClick={handleEgQueryClick}
+                                >
+                                    {each.title}
+                                </Button>
+                                )
+                            })}
+
+                        </div>
+                    </>
+
                 }
             </div>
         </div>

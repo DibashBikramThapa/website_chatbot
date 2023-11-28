@@ -880,6 +880,10 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1525,6 +1529,38 @@ video {
   animation: spin 1s linear infinite;
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-\[bounce_0\.5s_infinite\] {
+  animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-\[bounce_0\.8s_infinite\] {
+  animation: bounce 0.8s infinite;
+}
+
 .cursor-not-allowed {
   cursor: not-allowed;
 }
@@ -1798,6 +1834,10 @@ video {
 .divide-yellow-600 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(253 216 53 / var(--tw-divide-opacity));
+}
+
+.self-center {
+  align-self: center;
 }
 
 .justify-self-end {
@@ -2433,11 +2473,6 @@ video {
 
 .bg-red-500\/20 {
   background-color: rgb(244 67 54 / 0.2);
-}
-
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 57 53 / var(--tw-bg-opacity));
 }
 
 .bg-teal-500 {
