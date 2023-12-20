@@ -13,48 +13,50 @@ import Link from "next/link";
 import NavListMenu from "./NavbarMenu/view";
 
 const navListMenuServices = [
-    {'Essentail Services':
-        [{
-            title: "Business Setup Consultancy and Advice",
-            link: '/services/Business-setup-consultancy-advice',
-        },
-        {
-            title: "Trade License Processing:",
-            link: '/services/Trade-license-processing',
-        },
-        {
-            title: "Legal Services",
-            link: '/services/Legal-services',
-        },
-        ]
-    },
-    {'Operational Services':
-        [{
-            title: "Corporate Secretarial Services",
-            link: '/services/Corporate-secretarial-services',
-        },
-        {
-            title: "Accounting and Tax Services",
-            link: '/services/Accounting-and-tax-services',
-        },
-        {
-            title: "ChatGPT-Powered Chatbot",
-            link: '/ai-consultancy',
-        },
-        ]
-    },
-    {'Support Services':
-        [{
-            title: "Visa and Permit Processing",
-            link: '/services/Visa-and-permit-processing',
-        },
-        {
-            title: "Business Support Servicess",
-            link: '/services/Business-support-services',
-        },
-        ]
-    },
-
+  {
+    "Essentail Services": [
+      {
+        title: "Business Setup Consultancy and Advice",
+        link: "/services/Business-setup-consultancy-advice",
+      },
+      {
+        title: "Trade License Processing:",
+        link: "/services/Trade-license-processing",
+      },
+      {
+        title: "Legal Services",
+        link: "/services/Legal-services",
+      },
+    ],
+  },
+  {
+    "Operational Services": [
+      {
+        title: "Corporate Secretarial Services",
+        link: "/services/Corporate-secretarial-services",
+      },
+      {
+        title: "Accounting and Tax Services",
+        link: "/services/Accounting-and-tax-services",
+      },
+      {
+        title: "ChatGPT-Powered Chatbot",
+        link: "/ai-consultancy",
+      },
+    ],
+  },
+  {
+    "Support Services": [
+      {
+        title: "Visa and Permit Processing",
+        link: "/services/Visa-and-permit-processing",
+      },
+      {
+        title: "Business Support Servicess",
+        link: "/services/Business-support-services",
+      },
+    ],
+  },
 ];
 
 const navListMenuBusiness = [
@@ -121,85 +123,96 @@ const navListMenuTax = [
 ];
 
 const navListMenuResources = [
-    {'Hide Key':[
-        {
-            title: "About",
-            link: '/'
-        },
-        {
-            title: "Blog",
-            link: '/'
-        },
-        {
-            title: "Setup Guides",
-            link: '/'
-        },
-        {
-            title: "Press",
-            link: '/'
-        },
-        {
-            title: "Infographics",
-            link: '/'
-        },
-        {
-            title: "Get a Trade License",
-            link: '/'
-        },
-        {
-            title: "Infographics",
-            link: '/'
-        },
-        {
-            title: "E-commerce licence",
-            link: '/'
-        },
-        {
-            title: "How to start a business in Dubai",
-            link: '/'
-        },
-        {
-            title: "Our Partners",
-            link: '/'
-        },
-        {
-            title: "Stand Together UAE",
-            link: '/'
-        },
-        {
-            title: "Citizenship & Residency",
-            link: '/'
-        },
-        {
-            title: "FAQs",
-            link: '/'
-        },
-        {
-            title: "Support Services",
-            link: '/'
-        },
-    ]},
-]
+  {
+    "Hide Key": [
+      {
+        title: "About",
+        link: "/",
+      },
+      {
+        title: "Blog",
+        link: "/",
+      },
+      {
+        title: "Setup Guides",
+        link: "/",
+      },
+      {
+        title: "Press",
+        link: "/",
+      },
+      {
+        title: "Infographics",
+        link: "/",
+      },
+      {
+        title: "Get a Trade License",
+        link: "/",
+      },
+      {
+        title: "Infographics",
+        link: "/",
+      },
+      {
+        title: "E-commerce licence",
+        link: "/",
+      },
+      {
+        title: "How to start a business in Dubai",
+        link: "/",
+      },
+      {
+        title: "Our Partners",
+        link: "/",
+      },
+      {
+        title: "Stand Together UAE",
+        link: "/",
+      },
+      {
+        title: "Citizenship & Residency",
+        link: "/",
+      },
+      {
+        title: "FAQs",
+        link: "/",
+      },
+      {
+        title: "Support Services",
+        link: "/",
+      },
+    ],
+  },
+];
 
 function NavList() {
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       {/* <NavListMenu services='Business Setup' navListMenuItems={navListMenuBusiness}/> */}
       {/* <NavListMenu services='Accouting & Tax' navListMenuItems={navListMenuTax}/> */}
-      <NavListMenu services='Resources' navListMenuItems={navListMenuResources}/>
-      <NavListMenu services='Services' navListMenuItems={navListMenuServices}/>
+      <NavListMenu
+        services="Resources"
+        navListMenuItems={navListMenuResources}
+      />
+      <NavListMenu services="Services" navListMenuItems={navListMenuServices} />
 
-      <Link href="/contact-us" className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+      <Link
+        href="/contact-us"
+        className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium"
+      >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           Contact Us
         </ListItem>
       </Link>
 
-      <Link href="/about" className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium">
+      <Link
+        href="/about"
+        className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-medium"
+      >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           About Us
         </ListItem>
-        </Link>
+      </Link>
       {/* <Typography
         as="a"
         variant="small"
@@ -214,7 +227,7 @@ function NavList() {
   );
 }
 
-export default function NavbarWithMegaMenu({for_chat=false}) {
+export default function NavbarWithMegaMenu({ for_chat = false }) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -225,10 +238,20 @@ export default function NavbarWithMegaMenu({for_chat=false}) {
   }, []);
 
   return (
-    <Navbar className={for_chat? 'mx-auto max-w-screen-3xl fixed bg-white z-50 bg-opacity-100 shadow-hero': 'mx-auto mt-[3rem] max-w-screen-3xl fixed bg-white z-50 bg-opacity-100 shadow-hero'}>
+    <Navbar
+      className={
+        for_chat
+          ? "mx-auto max-w-screen-3xl fixed bg-white z-50 bg-opacity-100 shadow-hero"
+          : "mx-auto mt-[3rem] max-w-screen-3xl fixed bg-white z-50 bg-opacity-100 shadow-hero"
+      }
+    >
       <div className="flex items-center justify-between text-blue-gray-900">
         <Link href="/" className="text-xl font-bold">
-          Arnifi labs
+          <img
+            src="/images/LogoText.svg" // Adjust the path as needed
+            alt="Arnifi Labs Logo"
+            style={{ height: "40px", width: "auto" }} // Adjust the dimensions as needed
+          />
         </Link>
         <div className="hidden lg:block">
           <NavList />
