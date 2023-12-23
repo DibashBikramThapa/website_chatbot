@@ -10,9 +10,9 @@ import { Button } from "@material-tailwind/react";
 export default function hero({ user_input, getChatLog, getUserInput }) {
   const [chatLog, setchatLog] = useState([]);
   const [eg_query] = useState([
-    { title: "How do I get a bank account?" },
-    { title: "Will corporate tax affect me?" },
-    { title: "How do I start the visa process?" },
+    { title: "How do I get a bank account ?" },
+    { title: "Will corporate tax affect me ?" },
+    { title: "How do I start the visa process ?" },
   ]);
 
   const handleUserInputChange = async () => {
@@ -153,22 +153,22 @@ export default function hero({ user_input, getChatLog, getUserInput }) {
   }, [user_input]);
 
   return (
-    <div className="pt-20 grid justify-items-end align-items-end h-[100%]">
-      <div className="text-blue-700 mt-5 pt-5 h-[25rem] sm:h-[30rem] md:h-[34rem] italic astro-scrollbar overflow-y-auto w-full">
+    <div className="pt-20 w-full grid justify-items-end align-items-end">
+      <div className="text-blue-700 mt-5 pt-5 italic astro-scrollbar overflow-y-auto w-full">
         {chatLog.length ? (
           <UpdatedUserInput />
         ) : (
           <>
-            <p className="self-center text-xl text-blue-700 font-bold mb-3">
+            {/* <p className="self-center text-xl text-blue-700 font-bold mb-3">
               Some example questions you can ask AI Consultancy
-            </p>
+            </p> */}
             <div className="flex justify-center gap-2 flex-col md:flex-row">
               {eg_query.map((each, index) => {
                 return (
                   <Button
                     variant="text"
                     size="lg"
-                    className="bg-blue-700 text-white hover:bg-white hover:border-blue-700 border-2 hover:text-blue-700"
+                    className="bg-white sm:mx-0 mx-4 text-[#0C0048] hover:bg-[#6177E1] hover:text-white hover:border-[#6177E1] border-2"
                     key={index}
                     onClick={handleEgQueryClick}
                   >
