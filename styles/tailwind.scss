@@ -1664,6 +1664,10 @@ video {
   justify-items: end;
 }
 
+.justify-items-center {
+  justify-items: center;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -3022,6 +3026,10 @@ video {
 
 .pt-px {
   padding-top: 1px;
+}
+
+.pt-\[10rem\] {
+  padding-top: 10rem;
 }
 
 .text-left {
@@ -4925,6 +4933,11 @@ video {
 .hover\:border-blue-700:hover {
   --tw-border-opacity: 1;
   border-color: rgb(25 118 210 / var(--tw-border-opacity));
+}
+
+.hover\:border-\[\#3955D9\]:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(57 85 217 / var(--tw-border-opacity));
 }
 
 .hover\:bg-\[\#6177E1\]:hover {
