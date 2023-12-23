@@ -241,17 +241,19 @@ export default function NavbarWithMegaMenu({ for_chat = false }) {
     <Navbar
       className={
         for_chat
-          ? "mx-auto max-w-screen-3xl fixed bg-white z-50 bg-opacity-100 shadow-hero"
-          : "mx-auto mt-[3rem] max-w-screen-3xl fixed bg-white z-50 bg-opacity-100 shadow-hero"
+          ? "mx-auto left-1/2 transform -translate-x-1/2 fixed bg-white z-50 bg-opacity-100 rounded"
+          : "mx-auto mt-[3rem] left-1/2 transform -translate-x-1/2 fixed bg-white z-50 bg-opacity-100 rounded"
       }
+      style={{"boxShadow":"0px 0px 28px -3px #6177E1"}}
     >
-      <div className="flex items-center justify-between text-blue-gray-900">
-        <Link href="/" className="text-xl font-bold">
+      <div className="flex w-full items-center justify-between text-blue-gray-900">
+        <Link href="/" className="text-xl font-bold flex items-center">
           <img
             src="/images/LogoText.svg" // Adjust the path as needed
             alt="Arnifi Labs Logo"
             style={{ height: "40px", width: "auto" }} // Adjust the dimensions as needed
           />
+          <span className="font-semibold text-2xl mx-1 text-[#3955D9]">Labs</span>
         </Link>
         <div className="hidden lg:block">
           <NavList />
@@ -260,7 +262,7 @@ export default function NavbarWithMegaMenu({ for_chat = false }) {
           <Button
             variant="text"
             size="lg"
-            className="bg-blue-700 text-white hover:bg-white hover:border-blue-700 border-2 hover:text-blue-700"
+            className="bg-[#3955D9] text-white hover:bg-white hover:border-blue-700 border-2 hover:text-blue-700"
           >
             Cost Calculator
           </Button>
