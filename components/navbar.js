@@ -241,8 +241,8 @@ export default function NavbarWithMegaMenu({ for_chat = false }) {
     <Navbar
       className={
         for_chat
-          ? "mx-auto left-1/2 transform -translate-x-1/2 fixed bg-white z-50 bg-opacity-100 rounded"
-          : "mx-auto mt-[3rem] left-1/2 transform -translate-x-1/2 fixed bg-white z-50 bg-opacity-100 rounded"
+          ? "mx-auto left-1/2 transform w-11/12 -translate-x-1/2 fixed bg-white z-50 bg-opacity-100 rounded"
+          : "mx-auto mt-[3rem] left-1/2 w-11/12 transform -translate-x-1/2 fixed bg-white z-50 bg-opacity-100 rounded"
       }
       style={{"boxShadow":"0px 0px 28px -3px #6177E1"}}
     >
