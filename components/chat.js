@@ -10,9 +10,11 @@ import { Button } from "@material-tailwind/react";
 export default function hero({ user_input, getChatLog, getUserInput }) {
   const [chatLog, setchatLog] = useState([]);
   const [eg_query] = useState([
-    { title: "How do I get a bank account ?" },
-    { title: "Will corporate tax affect me ?" },
-    { title: "How do I start the visa process ?" },
+    { title: "What services do you offer for business setup?" },
+    { title: "Can you guide me through the process of setting up a company?" },
+    {
+      title: "Are there specific documents required during the setup process?",
+    },
   ]);
 
   const handleUserInputChange = async () => {
@@ -170,6 +172,7 @@ export default function hero({ user_input, getChatLog, getUserInput }) {
                     size="lg"
                     className="bg-white sm:mx-0 mx-4 text-[#0C0048] hover:bg-[#6177E1] hover:text-white hover:border-[#6177E1] border-2"
                     key={index}
+                    style={{ textTransform: "none" }}
                     onClick={handleEgQueryClick}
                   >
                     {each.title}
